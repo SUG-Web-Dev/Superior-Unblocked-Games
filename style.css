@@ -1,0 +1,75 @@
+/* === Page background and text === */
+body {
+  background-color: darkgrey;
+  font-family: Tahoma, sans-serif;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+
+/* === Link styles === */
+a:link {
+  color: orange;
+  text-decoration: none;
+}
+a:visited {
+  color: orangered;
+  text-decoration: underline;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+a:active {
+  color: lime;
+  text-decoration: underline;
+}
+
+/* === Header that sticks to the top === */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Navigation inside the header */
+.nav a {
+  color: orange;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+/* Spacer to push down page content */
+.spacer {
+  height: 100px;
+}
+
+/* === Headings with RGB glow === */
+h1 {
+  animation: rgb-glow 10s infinite;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+/* Pause animation when hovered */
+h1:hover {
+  animation-play-state: paused;
+}
+
+/* === RGB Glow Animation === */
+@keyframes rgb-glow {
+  0%   { color: red; text-shadow: 0 0 10px red; }
+  25%  { color: orange; text-shadow: 0 0 15px orange; }
+  50%  { color: lime; text-shadow: 0 0 15px lime; }
+  75%  { color: blue; text-shadow: 0 0 15px blue; }
+  100% { color: magenta; text-shadow: 0 0 15px magenta; }
+}
